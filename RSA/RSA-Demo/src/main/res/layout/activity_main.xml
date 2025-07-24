@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔐 RSA Encryption Demo"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="center"
+            android:paddingBottom="20dp" />
+
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/inputP"
+            style="@style/CustomEditText"
+            android:hint="Enter Prime Number p" />
+
+        <EditText
+            android:id="@+id/inputQ"
+            style="@style/CustomEditText"
+            android:hint="Enter Prime Number q" />
+
+        <EditText
+            android:id="@+id/inputE"
+            style="@style/CustomEditText"
+            android:hint="Enter Public Exponent e" />
+
+        <EditText
+            android:id="@+id/inputMessage"
+            style="@style/CustomEditText"
+            android:hint="Enter Message (as number)" />
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnGenerateKeys"
+            style="@style/CustomButton"
+            android:text="1️⃣ Generate Keys"
+            android:backgroundTint="#FF9800" />
+
+        <Button
+            android:id="@+id/btnEncrypt"
+            style="@style/CustomButton"
+            android:text="2️⃣ Encrypt"
+            android:backgroundTint="#03A9F4" />
+
+        <Button
+            android:id="@+id/btnDecrypt"
+            style="@style/CustomButton"
+            android:text="3️⃣ Decrypt"
+            android:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/btnShare"
+            style="@style/CustomButton"
+            android:text="4️⃣ Share Keys"
+            android:backgroundTint="#9C27B0" />
+
+        <!-- Output Section -->
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📄 Output will appear here..."
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:background="#222222"
+            android:padding="16dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:lineSpacingExtra="6dp"
+            android:elevation="2dp"
+            android:backgroundTintMode="src_in" />
+
+    </LinearLayout>
+</ScrollView>
